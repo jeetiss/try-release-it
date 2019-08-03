@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "name": "try-release-it",
+  "version": "0.0.0",
+  "scripts": {
+    "release": "release-it"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md"
+      }
+    }
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^1.1.0",
+    "release-it": "^12.3.5"
+  }
+}
