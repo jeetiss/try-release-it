@@ -2,6 +2,8 @@
   "private": true,
   "name": "try-release-it",
   "version": "0.0.0",
+  "main": "index.js",
+  "module": "index.js",
   "scripts": {
     "release": "release-it"
   },
