@@ -1,7 +1,6 @@
 {
-  "private": true,
-  "name": "try-release-it",
-  "version": "1.0.0",
+  "name": "@jeetiss/try-release-it",
+  "version": "0.0.0",
   "main": "index.js",
   "module": "index.js",
   "scripts": {
@@ -12,10 +11,10 @@
       "commitMessage": "chore: release ${version}"
     },
     "github": {
-      "release": true
+      "release": false
     },
     "npm": {
-      "publish": false
+      "publish": true
     },
     "plugins": {
       "@release-it/conventional-changelog": {
@@ -27,5 +26,8 @@
   "devDependencies": {
     "@release-it/conventional-changelog": "^1.1.0",
     "release-it": "^12.3.5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
