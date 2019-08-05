@@ -1,0 +1,16 @@
+language: node_js
+cache: npm
+node_js:
+  - node
+git:
+  depth: 5
+
+jobs:
+  include:
+    - stage: test
+      script:
+        - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ../.npmrc
+        - echo "da"
+
+stages:
+  - test
