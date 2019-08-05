@@ -11,12 +11,8 @@ node_js:
 git:
   depth: 5
 
-jobs:
-  include:
-    - stage: test
-      script:
-        - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ../.npmrc
-        - npm run release -- --ci
-
-stages:
-  - test
+deploy:
+  before_deploy: npm run release -- --ci
+  provider: npm
+  email: jeetiss@ya.ru
+  api_key: $NPM_TOKEN
