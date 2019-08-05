@@ -11,8 +11,10 @@ node_js:
 git:
   depth: 5
 
+before_deploy:
+  - npm run release -- --ci
+
 deploy:
-  before_deploy: npm run release -- --ci
   provider: npm
   email: jeetiss@ya.ru
   api_key: $NPM_TOKEN
