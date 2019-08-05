@@ -14,13 +14,16 @@
       "release": false
     },
     "npm": {
-      "publish": false
+      "publish": true
     },
     "plugins": {
       "@release-it/conventional-changelog": {
         "preset": "angular",
         "infile": "CHANGELOG.md"
       }
+    },
+    "hooks": {
+      "before:npm:release": "echo \"//registry.npmjs.org/:_authToken=$NPM_TOKEN\" > .npmrc"
     }
   },
   "devDependencies": {
