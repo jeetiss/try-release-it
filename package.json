@@ -1,6 +1,6 @@
 {
   "name": "@jeetiss/try-release-it",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "module": "index.js",
   "scripts": {
@@ -21,9 +21,6 @@
         "preset": "angular",
         "infile": "CHANGELOG.md"
       }
-    },
-    "hooks": {
-      "before:npm:release": ["echo LOOOL", "echo \"//registry.npmjs.org/:_authToken=$NPM_TOKEN\" > .npmrc", "cat .npmrc"]
     }
   },
   "devDependencies": {
