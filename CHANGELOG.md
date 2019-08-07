@@ -1,3 +1,12 @@
+## [1.1.7](https://github.com/jeetiss/try-release-it/compare/1.1.6...1.1.7) (2019-08-07)
+
+## [1.1.6](https://github.com/jeetiss/try-release-it/compare/1.1.5...1.1.6) (2019-08-07)
+
+
+### Bug Fixes
+
+* infinity release loop ([24dbb4e](https://github.com/jeetiss/try-release-it/commit/24dbb4e))
+
 ## [1.1.5](https://github.com/jeetiss/try-release-it/compare/1.1.4...1.1.5) (2019-08-07)
 
 ## [1.1.4](https://github.com/jeetiss/try-release-it/compare/1.1.3...1.1.4) (2019-08-07)
