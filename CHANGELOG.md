@@ -1,3 +1,5 @@
+## [1.1.1](https://github.com/jeetiss/try-release-it/compare/1.1.0...1.1.1) (2019-08-07)
+
 # [1.1.0](https://github.com/jeetiss/try-release-it/compare/1.0.0...1.1.0) (2019-08-07)
 
 
