@@ -11,5 +11,6 @@ node_js:
 
 script:
   - git update-index --assume-unchanged .npmrc
+  - git branch -u origin/master
   - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
   - npm run release -- --ci
