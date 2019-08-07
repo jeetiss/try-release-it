@@ -10,7 +10,7 @@ node_js:
   - node
 
 script:
+  - git checkout master
   - git update-index --assume-unchanged .npmrc
-  - git branch -u origin/master
   - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
   - npm run release -- --ci
