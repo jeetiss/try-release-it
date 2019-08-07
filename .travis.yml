@@ -12,12 +12,26 @@ node_js:
   - node
 
 
+jobs:
+  include:
+    - stage: release
+      script:
+        - git checkout master
+        - git remote rm origin
+        - git remote add origin https://jeetiss:${GITHUB_TOKEN}@github.com/jeetiss/try-release-it.git
+        - git fetch
+        - git branch -u origin/master
+        - git update-index --assume-unchanged .npmrc
+        - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+        - npm run release -- --ci
+
+stages:
+  - name: release
+    if: |
+      branch = master AND \
+      type = push AND \
+      (commit_message !~ /(no-release)/ or commit_message !~ /(^chore. release)/)
+
+
 script:
-  - git checkout master
-  - git remote rm origin
-  - git remote add origin https://jeetiss:${GITHUB_TOKEN}@github.com/jeetiss/try-release-it.git
-  - git fetch
-  - git branch -u origin/master
-  - git update-index --assume-unchanged .npmrc
-  - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
-  - npm run release -- --ci
+
